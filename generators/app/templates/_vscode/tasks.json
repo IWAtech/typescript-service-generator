@@ -6,8 +6,7 @@
   "showOutput": "always",
   "tasks": [
     {
-      "taskName": "build",
-      "isBuildCommand": true
+      "taskName": "build"
     },
     {
       "taskName": "clean"
@@ -21,6 +20,10 @@
     {
       "taskName": "test",
       "isTestCommand": true
+    },
+    {
+      "taskName": "watch",
+      "isBuildCommand": true
     }
   ]
 }

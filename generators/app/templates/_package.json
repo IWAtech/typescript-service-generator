@@ -1,13 +1,8 @@
 {
   "name": "<%= appname %>",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "<%= appname %>",
-  "license": "MIT",
-  "repository": "",
   "author": "",
-  "keywords": [
-    ""
-  ],
   "files": [
     "lib"
   ],
@@ -26,9 +21,11 @@
     "watch:test": "nodemon -w test -w src --exec npm run test"
   },
   "dependencies": {
+    "restify": "^4.3.0"
   },
   "devDependencies": {
     "@types/node": "^7.0.0",
+    "@types/restify": "^4.3.4",
     "@types/jasmine": "^2.5.53",
     "jasmine": "^2.6.0",
     "nyc": "^10.0.0",

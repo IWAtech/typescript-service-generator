@@ -37,22 +37,15 @@ module.exports = class extends Generator {
   }
 
   writing() {
-    this.fs.copy(
-      this.templatePath('src/greeter.ts'),
-      this.destinationPath('src/greeter.ts')
-    );
-    this.fs.copy(
+    this.fs.copyTpl(
       this.templatePath('src/index.ts'),
-      this.destinationPath('src/index.ts')
+      this.destinationPath('src/index.ts'),
+      {appname: this.props.projectName, orgname: this.props.organizationName}
     );
-
-    this.fs.copy(
-      this.templatePath('test/greeter-spec.ts'),
-      this.destinationPath('test/greeter-spec.ts')
-    );
-    this.fs.copy(
+    this.fs.copyTpl(
       this.templatePath('test/index-spec.ts'),
-      this.destinationPath('test/index-spec.ts')
+      this.destinationPath('test/index-spec.ts'),
+      {appname: this.props.projectName, orgname: this.props.organizationName}
     );
 
     this.fs.copy(
@@ -103,6 +96,6 @@ module.exports = class extends Generator {
   }
 
   install() {
-    // This.installDependencies();
+    this.installDependencies();
   }
 };

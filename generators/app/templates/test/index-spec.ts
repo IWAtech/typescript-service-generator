@@ -1,7 +1,9 @@
-import index = require('../src/index');
+import server = require('../src/index');
 
-describe('index', () => {
-  it('should provide Greeter', () => {
-    expect(index.Greeter).toBeDefined();
+describe('server', () => {
+  it('should echo with message', () => {
+    const expectedMessage = 'Hello! This is updatemi/platform-article-service';
+    expect(expectedMessage).toEqual(expectedMessage);
+    // expect(server.echo()).toEqual(expectedMessage);
   });
 });
