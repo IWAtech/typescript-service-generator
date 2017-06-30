@@ -26,7 +26,7 @@ module.exports = class extends Generator {
         type    : 'input',
         name    : 'organizationName',
         message : 'Name of your organization (or user) at Docker Hub?',
-        default : 'updatemi'
+        default : _.kebabCase(path.basename(path.dirname(process.cwd())))
       },
     ];
 
