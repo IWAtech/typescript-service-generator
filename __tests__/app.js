@@ -6,12 +6,15 @@ var helpers = require('yeoman-test');
 describe('generator-service-generator:app', () => {
   beforeAll(() => {
     return helpers.run(path.join(__dirname, '../generators/app'))
-      .withPrompts({someAnswer: true});
+      .withPrompts({
+        projectName: 'my-service',
+        organizationName: 'me'
+      });
   });
 
   it('creates files', () => {
     assert.file([
-      'dummyfile.txt'
+      'package.json'
     ]);
   });
 });

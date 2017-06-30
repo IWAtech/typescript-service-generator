@@ -17,17 +17,17 @@ module.exports = class extends Generator {
 
     const prompts = [
       {
-        type    : 'input',
-        name    : 'projectName',
-        message : 'First off, how would you like to name this project?',
-        default : _.kebabCase(path.basename(process.cwd()))
+        type: 'input',
+        name: 'projectName',
+        message: 'First off, how would you like to name this project?',
+        default: _.kebabCase(path.basename(process.cwd()))
       },
       {
-        type    : 'input',
-        name    : 'organizationName',
-        message : 'Name of your organization (or user) at Docker Hub?',
-        default : _.kebabCase(path.basename(path.dirname(process.cwd())))
-      },
+        type: 'input',
+        name: 'organizationName',
+        message: 'Name of your organization (or user) at Docker Hub?',
+        default: _.kebabCase(path.basename(path.dirname(process.cwd())))
+      }
     ];
 
     return this.prompt(prompts).then(props => {
@@ -63,7 +63,7 @@ module.exports = class extends Generator {
     this.fs.copyTpl(
       this.templatePath('_package.json'),
       this.destinationPath('package.json'),
-      { appname: this.props.projectName, orgname: this.props.organizationName }
+      {appname: this.props.projectName, orgname: this.props.organizationName}
     );
 
     this.fs.copy(
@@ -91,13 +91,18 @@ module.exports = class extends Generator {
       this.destinationPath('.gitignore')
     );
 
-    // this.fs.copy(
+    this.fs.copy(
+      this.templatePath('Dockerfile'),
+      this.destinationPath('Dockerfile')
+    );
+
+    // This.fs.copy(
     //   this.templatePath('README.md'),
     //   this.destinationPath('README.md')
     // );
   }
 
   install() {
-    // this.installDependencies();
+    // This.installDependencies();
   }
 };
