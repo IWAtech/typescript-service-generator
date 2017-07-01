@@ -8,11 +8,8 @@ const _ = require('lodash');
 module.exports = class extends Generator {
   prompting() {
     // Have Yeoman greet the user.
-    // this.log(yosay(
-    //   'Welcome to the top-notch ' + chalk.red('generator-service-generator') + ' generator!'
-    // ));
     this.log(yosay(
-      'Welcome to the minimal ' + chalk.red('Node TypeScript') + ' generator!'
+      'Welcome to the minimal ' + chalk.red('TypeScript Service') + ' generator!'
     ));
 
     const prompts = [

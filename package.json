@@ -1,19 +1,19 @@
 {
-  "name": "service-generator",
-  "version": "0.1.0",
-  "description": "scaffolds a new (micro-)service",
-  "homepage": "",
+  "name": "generator-typescript-service",
+  "version": "1.0.1",
+  "description": "scaffolds a new TypeScript NodeJs (micro-)service",
+  "homepage": "https://github.com/kl4n4/typescript-service-generator",
   "author": {
     "name": "Thomas Klaner",
     "email": "thomas@updatemi.com",
-    "url": ""
+    "url": "https://github.com/kl4n4"
   },
   "files": [
     "generators"
   ],
   "main": "generators/index.js",
   "keywords": [
-    "",
+    "generator-typescript-service",
     "yeoman-generator"
   ],
   "devDependencies": {
@@ -46,6 +46,5 @@
       "node": true
     }
   },
-  "repository": "IWAtech/generator-service-generator",
-  "private": true
+  "repository": "kl4n4/typescript-service-generator"
 }

@@ -1,19 +1,20 @@
-# generator-service-generator [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url]
-> scaffolds a new (micro-)service
+# generator-typescript-service [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url]
+scaffolds a new TypeScript NodeJs (micro-)service
+mostly for internal use at my company but feel free to use it as well ;)
 
 ## Installation
 
-First, install [Yeoman](http://yeoman.io) and generator-service-generator using [npm](https://www.npmjs.com/) (we assume you have pre-installed [node.js](https://nodejs.org/)).
+First, install [Yeoman](http://yeoman.io) and generator-typescript-service using [npm](https://www.npmjs.com/) (we assume you have pre-installed [node.js](https://nodejs.org/)).
 
 ```bash
 npm install -g yo
-npm install -g generator-service-generator
+npm install -g generator-typescript-service
 ```
 
 Then generate your new project:
 
 ```bash
-yo service-generator
+yo typescript-service
 ```
 
 ## Getting To Know Yeoman
@@ -25,7 +26,7 @@ yo service-generator
 
 ## License
 
- © [Thomas Klaner]()
+ © [Thomas Klaner](https://github.com/kl4n4)
 
 
 [npm-image]: https://badge.fury.io/js/generator-service-generator.svg
