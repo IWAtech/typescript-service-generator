@@ -4,6 +4,7 @@ export const server = restify.createServer({
   name: '<%= appname %>',
   version: '0.1.0',
 });
+
 server.use(restify.bodyParser());
 
 server.get('/echo', (req: restify.Request, res: restify.Response, next: restify.Next) => {

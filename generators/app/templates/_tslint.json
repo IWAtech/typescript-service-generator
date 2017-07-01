@@ -1,4 +1,10 @@
 {
+  "tslint.enable": true,
+  "defaultSeverity": "error",
+  "extends": [
+      "tslint:recommended"
+  ],
+  "jsRules": {},
   "rules": {
     "arrow-return-shorthand": true,
     "callable-types": true,
@@ -76,9 +82,9 @@
       "single"
     ],
     "radix": true,
-    "semicolon": [
-      "always"
-    ],
+    // "semicolon": [
+    //   "always"
+    // ],
     "triple-equals": [
       true,
       "allow-null-check"
@@ -104,5 +110,6 @@
       "check-separator",
       "check-type"
     ]
-  }
+  },
+  "rulesDirectory": []
 }
