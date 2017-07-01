@@ -29,9 +29,9 @@ yo typescript-service
  © [Thomas Klaner](https://github.com/kl4n4)
 
 
-[npm-image]: https://badge.fury.io/js/generator-service-generator.svg
-[npm-url]: https://npmjs.org/package/generator-service-generator
-[travis-image]: https://travis-ci.org/IWAtech/generator-service-generator.svg?branch=master
-[travis-url]: https://travis-ci.org/IWAtech/generator-service-generator
-[daviddm-image]: https://david-dm.org/IWAtech/generator-service-generator.svg?theme=shields.io
-[daviddm-url]: https://david-dm.org/IWAtech/generator-service-generator
+[npm-image]: https://badge.fury.io/js/generator-typescript-service.svg
+[npm-url]: https://npmjs.org/package/generator-typescript-service
+[travis-image]: https://travis-ci.org/IWAtech/generator-typescript-service.svg?branch=master
+[travis-url]: https://travis-ci.org/IWAtech/generator-typescript-service
+[daviddm-image]: https://david-dm.org/IWAtech/generator-typescript-service.svg?theme=shields.io
+[daviddm-url]: https://david-dm.org/IWAtech/generator-typescript-service
