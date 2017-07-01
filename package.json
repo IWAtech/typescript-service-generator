@@ -2,7 +2,7 @@
   "name": "generator-typescript-service",
   "version": "1.0.1",
   "description": "scaffolds a new TypeScript NodeJs (micro-)service",
-  "homepage": "https://github.com/kl4n4/typescript-service-generator",
+  "homepage": "https://github.com/IWAtech/typescript-service-generator",
   "author": {
     "name": "Thomas Klaner",
     "email": "thomas@updatemi.com",
@@ -46,5 +46,5 @@
       "node": true
     }
   },
-  "repository": "kl4n4/typescript-service-generator"
+  "repository": "IWAtech/typescript-service-generator"
 }
