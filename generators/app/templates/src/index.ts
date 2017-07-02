@@ -7,9 +7,9 @@ export const server = restify.createServer({
 });
 
 // setup tracking (exports prometheus metrics @ port 9090 /metrics)
-const tracker = Tracker.getInstance(server.name);
+const tracker = Tracker.getInstance({name: server.name});
 server.on('after', (req: restify.Request, res: restify.Response) => {
-  tracker.trackResponseTime(req.url, req.method, res.statusCode, Tracker.sumUp(req.timers.map((t) => t.time)));
+  tracker.trackRequest(req.url, req.method, res.statusCode, Tracker.sumUp(req.timers.map((t) => t.time)));
 });
 
 server.use(restify.bodyParser());
