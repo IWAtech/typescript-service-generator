@@ -82,6 +82,10 @@ module.exports = class extends Generator {
     );
 
     this.fs.copy(
+      this.templatePath('dockerignore'),
+      this.destinationPath('.dockerignore')
+    );
+    this.fs.copy(
       this.templatePath('Dockerfile'),
       this.destinationPath('Dockerfile')
     );
