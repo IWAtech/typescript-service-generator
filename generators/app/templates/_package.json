@@ -23,7 +23,7 @@
   },
   "dependencies": {
     "restify": "^4.3.0",
-    "prometheus-tracking": "^0.2.6"
+    "prometheus-tracking": "^0.2.7"
   },
   "devDependencies": {
     "@types/jasmine": "^2.5.53",
