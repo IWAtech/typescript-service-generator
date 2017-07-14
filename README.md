@@ -1,5 +1,5 @@
 # generator-typescript-service [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url]
-scaffolds a new TypeScript NodeJs (micro-)service
+scaffolds a new TypeScript NodeJs service
 mostly for internal use at my company but feel free to use it as well ;)
 
 ## Installation

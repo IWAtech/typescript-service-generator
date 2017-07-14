@@ -22,8 +22,9 @@
     "watch:test": "nodemon -w test -w src --exec npm run test"
   },
   "dependencies": {
+    "applicationinsights": "^0.21.0",
     "restify": "^4.3.0",
-    "prometheus-tracking": "^0.3.0"
+    "typescript-simple-di": "^1.0.0"
   },
   "devDependencies": {
     "@types/jasmine": "^2.5.53",
@@ -39,7 +40,7 @@
     "typescript": "^2.3.4"
   },
   "engines": {
-    "node": ">=4.0.0"
+    "node": ">=8.0.0"
   },
   "nyc": {
     "include": [

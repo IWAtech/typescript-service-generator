@@ -1,6 +1,6 @@
 FROM node:alpine
 
-COPY package.json /usr/src/app/package.json
+COPY package.json yarn.lock /usr/src/app/
 WORKDIR /usr/src/app
 RUN npm install --production
 
