@@ -2,8 +2,8 @@ import fetch from 'node-fetch';
 
 import index = require('../src/index');
 
-describe('server', () => {
-  it('should echo with message', (done) => {
+describe('Given the initialized server instance it', () => {
+  it('should echo with the expected message', (done) => {
     const expectedMessage = 'Hello! This is <%= orgname %>/<%= appname %>';
     index.server.once('listening', async () => {
       try {
