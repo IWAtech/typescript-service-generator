@@ -19,7 +19,9 @@
     "test": "jasmine --config=jasmine.json",
     "test:coverage": "nyc --include=\"src/**/*.ts\" --reporter=text --reporter=html --reporter=lcov jasmine --config=jasmine.json",
     "watch": "npm run build -- --watch",
-    "watch:test": "nodemon -w test -w src --exec npm run test"
+    "watch:test": "nodemon -w test -w src --exec npm run test",
+    "yarn:install:mongoose": "yarn add bluebird mongoose && yarn add -D @types/bluebird @types/mongodb @types/mongoose && echo 'take a look in the README to see how to get started'",
+    "yarn:install:graphql": "yarn add graphql-server-express body-parser express graphql graphql-tools && yarn add -D @types/body-parser && echo 'take a look in the README to see how to get started'"
   },
   "dependencies": {
     "applicationinsights": "^0.21.0",
