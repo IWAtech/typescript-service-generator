@@ -13,7 +13,7 @@
     "clean": "rm -rf lib",
     "lint": "tslint -c tslint.json verbose \"src/**/*.ts\"",
     "start": "node lib/index.js",
-    "start:dev": "nodemon lib/index.js",
+    "start:watch": "nodemon lib/index.js",
     "build": "npm run lint && echo Using TypeScript && tsc --version && tsc --pretty -p .",
     "build:docker": "npm run build && docker build -t <%= orgname %>/<%= appname %>:latest . && docker push <%= orgname %>/<%= appname %>:latest",
     "test": "jasmine --config=jasmine.json",
