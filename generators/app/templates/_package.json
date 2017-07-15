@@ -25,6 +25,7 @@
   },
   "dependencies": {
     "applicationinsights": "^0.21.0",
+    "node-fetch": "^1.7.1",
     "restify": "^4.3.0",
     "typescript-simple-di": "^1.0.0"
   },
@@ -34,7 +35,6 @@
     "@types/node-fetch": "^1.6.7",
     "@types/restify": "^4.3.4",
     "jasmine": "^2.6.0",
-    "node-fetch": "^1.7.1",
     "nodemon": "^1.11.0",
     "nyc": "^10.0.0",
     "ts-node": "^3.1.0",

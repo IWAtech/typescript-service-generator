@@ -1,6 +1,6 @@
 {
   "name": "generator-typescript-service",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "scaffolds a new TypeScript NodeJs service",
   "homepage": "https://github.com/IWAtech/typescript-service-generator",
   "author": {
