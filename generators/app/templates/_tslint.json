@@ -76,6 +76,9 @@
       "check-else",
       "check-whitespace"
     ],
+    "ordered-imports": [
+      false
+    ],
     "prefer-const": true,
     "quotemark": [
       true,
