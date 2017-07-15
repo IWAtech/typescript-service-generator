@@ -90,10 +90,11 @@ module.exports = class extends Generator {
       this.destinationPath('Dockerfile')
     );
 
-    // This.fs.copy(
-    //   this.templatePath('README.md'),
-    //   this.destinationPath('README.md')
-    // );
+    this.fs.copyTpl(
+      this.templatePath('README.md'),
+      this.destinationPath('README.md'),
+      {appname: this.props.projectName, orgname: this.props.organizationName}
+    );
   }
 
   install() {
