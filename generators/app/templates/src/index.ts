@@ -1,18 +1,26 @@
-import { Tracker } from 'prometheus-tracking';
+import appInsights = require('applicationinsights');
 import * as restify from 'restify';
+import { SimpleDI } from 'typescript-simple-di';
 
 export const server = restify.createServer({
   name: '<%= appname %>',
   version: '0.1.0',
 });
+server.use(restify.bodyParser());
 
-// setup tracking (exports prometheus metrics @ port 9090 /metrics)
-const tracker = Tracker.getInstance({name: server.name});
-server.on('after', (req: restify.Request, res: restify.Response) => {
-  tracker.trackRequest(req.url, req.method, res.statusCode, Tracker.sumUp((req.timers || []).map((t) => t.time)));
+// setup azure application insights
+const key = 'insert-your-azure-application-insights-key-here';
+appInsights.setup(key)
+    .setAutoCollectRequests(false)
+    .start();
+const client = appInsights.client;
+server.pre((req: restify.Request, res: restify.Response, next: restify.Next) => {
+  client.trackRequest(req, res, { app: server.name });
+  return next();
 });
 
-server.use(restify.bodyParser());
+// setup IoC service
+SimpleDI.registerByName('appinsights', client);
 
 server.get('/echo', (req: restify.Request, res: restify.Response, next: restify.Next) => {
   res.send(200, {message: 'Hello! This is <%= orgname %>/<%= appname %>'});
