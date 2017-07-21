@@ -26,20 +26,22 @@
   "dependencies": {
     "applicationinsights": "^0.21.0",
     "node-fetch": "^1.7.1",
-    "restify": "^4.3.0",
+    "restify": "^5.0.1",
+    "restify-errors": "^4.3.0",
     "typescript-simple-di": "^1.0.0"
   },
   "devDependencies": {
     "@types/jasmine": "^2.5.53",
-    "@types/node": "^7.0.0",
+    "@types/node": "^8.0.14",
     "@types/node-fetch": "^1.6.7",
-    "@types/restify": "^4.3.4",
+    "@types/restify": "^5.0.1",
+    "@types/restify-errors": "^4.3.1",
     "jasmine": "^2.6.0",
     "nodemon": "^1.11.0",
     "nyc": "^10.0.0",
     "ts-node": "^3.1.0",
     "tslint": "^5.4.3",
-    "typescript": "^2.3.4"
+    "typescript": "^2.4.0"
   },
   "engines": {
     "node": ">=8.0.0"

@@ -1,12 +1,14 @@
 import appInsights = require('applicationinsights');
 import * as restify from 'restify';
+import * as restifyErrors from 'restify-errors';
 import { SimpleDI } from 'typescript-simple-di';
 
 export const server = restify.createServer({
   name: '<%= appname %>',
   version: '0.1.0',
+  handleUncaughtExceptions: true,
 });
-server.use(restify.bodyParser());
+server.use(restify.plugins.bodyParser({ mapParams: true }));
 
 // setup azure application insights
 const key = 'insert-your-azure-application-insights-key-here';
