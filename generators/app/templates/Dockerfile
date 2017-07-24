@@ -6,4 +6,4 @@ RUN yarn install --production
 
 COPY lib /usr/src/app/lib
 
-CMD ["npm", "start"]
+CMD ["yarn", "start"]
