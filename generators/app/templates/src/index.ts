@@ -11,15 +11,19 @@ export const server = restify.createServer({
 server.use(restify.plugins.bodyParser({ mapParams: true }));
 
 // setup azure application insights
-const key = 'insert-your-azure-application-insights-key-here';
-appInsights.setup(key)
-    .setAutoCollectRequests(false)
-    .start();
-const client = appInsights.client;
-server.pre((req: restify.Request, res: restify.Response, next: restify.Next) => {
-  client.trackRequest(req, res, { app: server.name });
-  return next();
-});
+const appInsightsKey = process.env.APPINSIGHTS_KEY;
+if (appInsightsKey) {
+  appInsights.setup(appInsightsKey)
+      .setAutoCollectRequests(false)
+      .start();
+  const client = appInsights.client;
+  SimpleDI.registerByName('appinsights', client);
+
+  server.pre((req: restify.Request, res: restify.Response, next: restify.Next) => {
+    client.trackRequest(req, res, { app: server.name });
+    return next();
+  });
+}
 
 // setup IoC service
 SimpleDI.registerByName('appinsights', client);
