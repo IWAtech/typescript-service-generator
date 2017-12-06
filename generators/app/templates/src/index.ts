@@ -25,9 +25,6 @@ if (appInsightsKey) {
   });
 }
 
-// setup IoC service
-SimpleDI.registerByName('appinsights', client);
-
 server.get('/echo', (req: restify.Request, res: restify.Response, next: restify.Next) => {
   res.send(200, {message: 'Hello! This is <%= orgname %>/<%= appname %>'});
   next();
