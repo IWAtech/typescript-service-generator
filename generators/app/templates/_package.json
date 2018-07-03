@@ -11,7 +11,7 @@
   "typings": "lib/index.d.ts",
   "scripts": {
     "clean": "rm -rf lib",
-    "lint": "tslint -c tslint.json verbose \"src/**/*.ts\"",
+    "lint": "tslint -c tslint.json \"src/**/*.ts\"",
     "start": "node lib/index.js",
     "start:watch": "nodemon lib/index.js",
     "build": "yarn run lint && echo Using TypeScript && tsc --version && tsc --pretty -p .",
