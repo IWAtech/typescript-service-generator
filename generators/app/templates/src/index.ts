@@ -8,7 +8,7 @@ export const server = restify.createServer({
   version: '0.1.0',
   handleUncaughtExceptions: true,
 });
-server.use(restify.plugins.bodyParser({ mapParams: true }));
+server.use(restify.plugins.bodyParser({ mapParams: true, maxFileSize: 20 * 1024 * 1024 }));
 
 // setup azure application insights
 const appInsightsKey = process.env.APPINSIGHTS_KEY;
@@ -16,11 +16,14 @@ if (appInsightsKey) {
   appInsights.setup(appInsightsKey)
       .setAutoCollectRequests(false)
       .start();
-  const client = appInsights.client;
+  const client = appInsights.defaultClient;
   SimpleDI.registerByName('appinsights', client);
 
   server.pre((req: restify.Request, res: restify.Response, next: restify.Next) => {
-    client.trackRequest(req, res, { app: server.name });
+    client.trackNodeHttpRequest({
+      request: req,
+      response: res,
+    });
     return next();
   });
 }
