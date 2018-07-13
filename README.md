@@ -17,6 +17,17 @@ Then generate your new project:
 yo typescript-service
 ```
 
+And up you go!
+
+```
+yarn build && yarn start
+```
+
+## Environment Variables
+
+  * APPINSIGHTS_KEY: your appinsights key so we can setup basic logging for you
+  * PORT: the server will listen to port 8000 by default, you can override this with any non reserved (<1024) port here
+
 ## Getting To Know Yeoman
 
  * Yeoman has a heart of gold.
