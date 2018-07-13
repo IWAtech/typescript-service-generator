@@ -6,7 +6,6 @@ import { SimpleDI } from 'typescript-simple-di';
 export const server = restify.createServer({
   name: '<%= appname %>',
   version: '0.1.0',
-  handleUncaughtExceptions: true,
 });
 server.use(restify.plugins.bodyParser({ mapParams: true, maxFileSize: 20 * 1024 * 1024 }));
 
