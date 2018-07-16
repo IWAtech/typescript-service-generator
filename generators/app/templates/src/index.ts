@@ -33,8 +33,8 @@ server.get('/echo', (req: restify.Request, res: restify.Response, next: restify.
 });
 
 const port = process.env.PORT && parseInt(process.env.PORT, 10) > 1023 ? parseInt(process.env.PORT, 10) : 8000;
-if(port !== parseInt(process.env.PORT, 10)) {
-  console.log("Ignoring passed port " + process.env.PORT + " because it is invalid. ");
+if (port !== parseInt(process.env.PORT, 10)) {
+  console.log('Ignoring passed port ' + process.env.PORT + ' because it is invalid. ');
 }
 server.listen(port, () => {
   console.log('%s listening at %s', server.name, server.url);
