@@ -1,61 +1,16 @@
-// See https://go.microsoft.com/fwlink/?LinkId=733558
-// for the documentation about the tasks.json format
 {
-  "version": "0.1.0",
+  // See https://go.microsoft.com/fwlink/?LinkId=733558
+  // for the documentation about the tasks.json format
+  "version": "2.0.0",
   "tasks": [
     {
-      "taskName": "build",
-      "command": "npm",
-      "isShellCommand": true,
-      "args": ["run"],
-      "showOutput": "always"
-    },
-    {
-      "taskName": "clean",
-      "command": "npm",
-      "isShellCommand": true,
-      "args": ["run"],
-      "showOutput": "always"
-    },
-    {
-      "taskName": "lint",
-      "command": "npm",
-      "isShellCommand": true,
-      "args": ["run"],
-      "showOutput": "always"
-    },
-    {
-      "taskName": "coverage",
-      "command": "npm",
-      "isShellCommand": true,
-      "args": ["run"],
-      "showOutput": "always"
-    },
-    {
-      "taskName": "test",
-      "command": "npm",
-      "isShellCommand": true,
-      "args": ["run"],
-      "showOutput": "always",
-      "isTestCommand": true
-    },
-    // {
-    //   "taskName": "watch",
-    //   "command": "npm",
-    //   "isShellCommand": true,
-    //   "args": ["run"],
-    //   "showOutput": "always",
-    //   "isBuildCommand": true
-    // },
-    {
-      "taskName": "watch",
-      "command": "tsc",
-      "isShellCommand": true,
-      "args": ["-w", "-p", "."],
-      "showOutput": "silent",
-      "isBackground": true,
-      "problemMatcher": "$tsc-watch",
-      "isBuildCommand": true
+      "type": "npm",
+      "script": "watch",
+      "problemMatcher": [],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
     }
   ]
 }
