@@ -7,24 +7,17 @@ export const server = restify.createServer({
   name: '<%= appname %>',
   version: '0.1.0',
 });
-server.use(restify.plugins.bodyParser({ mapParams: true, maxFileSize: 20 * 1024 * 1024 }));
+server.use(restify.plugins.bodyParser({ mapParams: true }));
 
 // setup azure application insights
 const appInsightsKey = process.env.APPINSIGHTS_KEY;
 if (appInsightsKey) {
-  appInsights.setup(appInsightsKey)
-      .setAutoCollectRequests(false)
-      .start();
+  appInsights.setup(appInsightsKey).start();
   const client = appInsights.defaultClient;
+  client.commonProperties = {
+    app: '<%= appname %>',
+  };
   SimpleDI.registerByName('appinsights', client);
-
-  server.pre((req: restify.Request, res: restify.Response, next: restify.Next) => {
-    client.trackNodeHttpRequest({
-      request: req,
-      response: res,
-    });
-    return next();
-  });
 }
 
 server.get('/echo', (req: restify.Request, res: restify.Response, next: restify.Next) => {
@@ -32,10 +25,7 @@ server.get('/echo', (req: restify.Request, res: restify.Response, next: restify.
   next();
 });
 
-const port = process.env.PORT && parseInt(process.env.PORT, 10) > 1023 ? parseInt(process.env.PORT, 10) : 8000;
-if (port !== parseInt(process.env.PORT, 10)) {
-  console.log('Ignoring passed port ' + process.env.PORT + ' because it is invalid. ');
-}
+const port = Number(process.env.PORT) || 8000;
 server.listen(port, () => {
   console.log('%s listening at %s', server.name, server.url);
 });

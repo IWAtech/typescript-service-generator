@@ -5,7 +5,7 @@
   "homepage": "https://github.com/IWAtech/typescript-service-generator",
   "author": {
     "name": "Thomas Klaner",
-    "email": "thomas@updatemi.com",
+    "email": "thomas@apollo.ai",
     "url": "https://github.com/kl4n4"
   },
   "contributors": [
@@ -24,17 +24,17 @@
     "yeoman-generator"
   ],
   "devDependencies": {
-    "eslint": "^3.18.0",
-    "eslint-config-xo-space": "^0.16.0",
-    "jest": "^23.3.0",
-    "jest-cli": "^23.3.0",
+    "eslint": "^6.1.0",
+    "eslint-config-xo-space": "^0.21.0",
+    "jest": "^24.8.0",
+    "jest-cli": "^24.8.0",
     "yeoman-assert": "^3.1.1",
-    "yeoman-test": "^1.8.0"
+    "yeoman-test": "^2.0.0"
   },
   "dependencies": {
-    "chalk": "^2.4.1",
-    "lodash": "^4.17.10",
-    "yeoman-generator": "^3.0.0",
+    "chalk": "^2.4.2",
+    "lodash": "^4.17.15",
+    "yeoman-generator": "^4.0.1",
     "yosay": "^2.0.2"
   },
   "jest": {
