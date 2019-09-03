@@ -4,6 +4,6 @@
     "**/*-spec.ts"
   ],
   "helpers": [
-    "../node_modules/ts-node/register.js"
+    "../node_modules/ts-node/register/index.js"
   ]
 }
